@@ -1,0 +1,26 @@
+ Declare str1 : String
+        Declare str2 : String
+        Declare str3 : String
+        str1 = ""
+        str2 = ""
+        str3 = ""
+        INPUT "enter string to process :"
+        INPUT str1
+        str1 = LCase(str1)
+        If Len(str1) < 3 Then
+            OUTPUT "The string is " & " " & str1
+        End If
+
+        If Len(str1) > 3 Or Len(str1) = 3 Then
+            str2 = Right(str1, 3)
+        End If
+        If Len(str1) > 3 Or Len(str1) = 3 Then
+            If str2 = "ing" Then
+                str3 = str1 & "ly"
+            ElseIf str2 <> "ing" Then
+                str3 = str1 & "ing"
+            End If
+        End If
+        If Len(str1) > 3 Or Len(str1) = 3 Then
+            OUTPUT "the new string is :" & str3
+        End If

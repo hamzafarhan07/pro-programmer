@@ -1,0 +1,34 @@
+ Declare str1 : String
+        Declare str2 : String
+        Declare char1 : Char
+        Declare char2 : Char
+        Declare char3 : Char
+        Declare i : Integer
+
+        str1 = ""
+        str2 = ""
+        char1 = ''
+        char2 = ''
+        char3 = ''
+
+        INPUT "Enter string to process :"
+        INPUT str1
+        str1 = LCase(str1)
+
+
+        INPUT "Enter character that should be replaced :")
+         INPUT char1 
+
+         INPUT "Enter character that should replace :"
+         INPUT char3 
+
+        For i = 1 To Len(str1)
+            char2 = Mid(str1, i, 1)
+            If char1 <> char2 Then
+                str2 = str2 & char2
+            Else : str2 = str2 & char3
+            End If
+        Next i
+        OUTPUT "Enter string that is processed: " & str2
+
+        

@@ -1,0 +1,12 @@
+Declare numberofdonuts : Integer
+        numberofdonuts = 0
+
+        INPUT "Number of donuts are :"
+         INPUT numberofdonuts 
+
+        If numberofdonuts <= 10 Then
+            OUTPUT "the number of donuts are :" & numberofdonuts
+        End If
+        If numberofdonuts > 10 Then
+            OUTPUT "Many"
+        End If 

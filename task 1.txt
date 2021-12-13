@@ -1,0 +1,35 @@
+Declare str1 : string 
+Declare char1 : character 
+Declare containallalphabets : Boolean
+Declare i : integer
+
+
+str1 = ""
+alphabets = "abcdefghijklmnopqrstuvwxyz"
+char1 = ''
+containallalphabets = TRUE
+i = 0
+
+
+
+  Input str1
+str1 = LC:e(str1)
+  FOR i = 1 to Len(str1)
+ char1 = MID(str1, i, 1)
+if LOCATE(str1, char1) = 0 then
+   containallalphabets = FALSE 
+if containallalphabets = FALSE then 
+EXIT FOR
+NEXT i 
+
+ if containallalphabets = TRUE then
+ OUTPUT "Entered string contains all alphabets"
+end if
+
+ if containallalphabets = FALSE then
+OUTPUT "Entered string does not contain all alphabets"
+end if
+
+
+
+

@@ -1,0 +1,36 @@
+ Declare str1 : String
+        Declare char1 : Char
+        Declare i : Integer
+        Declare spchar : Integer
+        Declare capitalalpha : Integer
+        Declare smallalpha : Integer
+        Declare noofdigits : Integer
+
+        str1 = ""
+        char1 = ''
+        i = 0
+        spchar = 0
+        capitalalpha = 0
+        smallalpha = 0
+        noofdigits = 0
+
+        INPUT "enter string to process :"
+         INPUT str1
+
+        For i = 1 To Len(str1)
+            char1 = Mid(str1, i, 1)
+            If char1 >= "A" And char1 <= "Z" Then
+                capitalalpha = capitalalpha + 1
+
+            ElseIf char1 >= "a" And char1 <= "z" Then
+                smallalpha = smallalpha + 1
+
+            ElseIf char1 >= "1" And char1 <= "9" Then
+                noofdigits = noofdigits + 1
+            Else  spchar = spchar + 1
+            End If
+        Next
+        OUTPUT "number of capital letters are :" & capitalalpha
+        OUTPUT "number of small letters are :" & smallalpha
+        OUTPUT "number of numerical digits :" & noofdigits
+        OUTPUT "number of special characters are :" & spchar

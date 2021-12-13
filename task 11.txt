@@ -1,0 +1,22 @@
+  Declare str1, str2 : String
+        Declare location1, location2, i : Integer
+
+        str1 = ""
+        str2 = ""
+        location1 = 0
+        location2 = 0
+        i = 0
+        INPUT "enter string to process :"
+         INPUT str1
+        str1 = LCase(str1)
+
+        For i = 1 To Len(str1)
+            If Mid(str1, i, 3) = "not" Then
+                location1 = i
+            End If
+            If Mid(str1, i, 3) = "bad" Then
+                location2 = i
+            End If
+        Next
+        str2 = Mid(str1, i, location1 - 1) & "good" & Mid(str1, location2 + 3, Len(str1))
+        OUTPUT "You can also say" & str2

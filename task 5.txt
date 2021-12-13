@@ -1,0 +1,48 @@
+
+        Declare str1 : String
+        Declare Char1 : Char
+        Declare i : Integer
+        Declare acount : Integer
+        Declare ecount : Integer
+        Declare icount : Integer
+        Declare ocount : Integer
+        Declare ucount : Integer
+
+        str1 = ""
+        Char1 = ''
+        i = 0
+        acount = 0
+        ecount = 0
+        icount = 0
+        ocount = 0
+        ucount = 0
+
+        INPUT "The entered string to be processed : "
+        INPUT str1 
+        str1 = LCase(str1)
+
+        For i = 1 To Len(str1)
+            Char1 = Mid(str1, i, 1)
+            If Char1 = "a" Then
+                acount = acount + 1
+            End If
+            If Char1 = "e" Then
+                ecount = ecount + 1
+            End If
+            If Char1 = "o" Then
+                ocount = ocount + 1
+            End If
+            If Char1 = "i" Then
+                icount = icount + 1
+            End If
+            If Char1 = "u" Then
+                ucount = ucount + 1
+            End If
+
+
+        Next i
+        OUTPUT "a count =" & acount
+        OUTPUT "e count =" & ecount
+        OUTPUT "o count i=" & ocount
+        OUTPUT "i count =" & icount
+        OUTPUT "u count =" & ucount

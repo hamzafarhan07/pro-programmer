@@ -1,0 +1,39 @@
+   Declare str1 : String
+        Declare Character1 : Characteracter
+        Declare Character2 : Character
+        Declare mostrepeatedCharacter : Character
+        Declare counter : Integer
+        Declare i : Integer
+        Declare j : Integer
+        Declare appeared : Integer
+
+
+        str1 = ""
+        Character1 = ""
+        Character2 = ''
+        mostrepeatedCharacter = ''
+        i = 0
+        j = 0
+        counter = 0
+        appeared = 0
+
+        INPUT "enter string :"
+         INPUT str1 
+
+        For i = 1 To Len(str1)
+            Character1 = Mid(str1, i, 1)
+            counter = 0
+            For j = 1 To Len(str1)
+                Character2 = Mid(str1, j, 1)
+                If Character2 = Character1 Then
+                    counter = counter + 1
+                End If
+            Next
+            If counter > appeared Then
+                appeared = counter
+                mostrepeatedCharacter = Character1
+            End If
+        Next i
+
+         OUTPUT "the most repeated Character is :" & mostrepeatedCharacter
+        OUTPUT "it appeared" & " " & appeared & "times"

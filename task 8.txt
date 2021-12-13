@@ -1,0 +1,38 @@
+ Declare str1 : String
+        Declare char1 : String
+        Declare char2 : String
+        Declare newstr : String
+        Declare i : Integer
+
+        str1 = ""
+        char1 = ''
+        char2 = ''
+        newstr = ""
+        i = 0
+        INPUT "Enter string to be processed :"
+        INPUT str1
+        If Len(str1) = 1 Then
+            OUTPUT "The string is" & " " & str1
+        End If
+
+        If Len(str1) > 1 Then
+            char1 = Left(str1, 1)
+        End If
+
+        newstr = newstr & char1
+
+        For i = 2 To Len(str1)
+            char2 = Mid(str1, i, 1)
+            If char1 = char2 Then
+                newstr = newstr & "*"
+            End If
+
+            If char1 <> char2 Then
+                newstr = newstr & char2
+            End If
+        Next
+
+
+        If Len(str1) > 1 Then
+            OUTPUT "The new string is :" & " " & newstr
+        End If

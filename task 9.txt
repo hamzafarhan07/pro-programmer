@@ -1,0 +1,33 @@
+   Declare a : String
+        Declare b : String
+        Declare f2char1 : String
+        Declare f2char2 : String
+        Declare f2char3 : String
+        Declare f2char4 : String
+        Declare newstr : String
+
+        a = ""
+        b = ""
+        f2char1 = ""
+        f2char2 = ""
+        f2char3 = ""
+        f2char4 = ""
+        newstr = ""
+
+        INPUT "enter string A :"
+         INPUT a
+        a = LCase(a)
+        INPUT "enter string B :"
+         INPUT b
+         b = LCase(b)
+        If Len(a) > 2 And Len(b) > 2 Then
+            f2char1 = Mid(a, 1, 2)
+            f2char2 = Mid(b, 1, 2)
+        End If
+
+        f2char3 = Mid(a, 3, Len(a))
+        f2char4 = Mid(b, 3, Len(b))
+
+        newstr = (f2char2 & f2char3) & " " & (f2char1 & f2char4)
+
+        OUTPUT "the swapped string is :" & newstr

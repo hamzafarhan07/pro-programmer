@@ -1,0 +1,24 @@
+        Declare str1 : String
+        Declare newstr : String
+        Declare f2char : String
+        Declare l2char : String
+
+
+        str1 = ""
+        newstr = ""
+        f2char = ""
+        l2char = ""
+
+
+        INPUT "Enter string to be processed :"
+         INPUT str1 
+
+        If Len(str1) < 2 Then
+            OUTPUT "Entered string is too short :"
+        End If
+        If Len(str1) > 2 Then
+                f2char = Left(str1, 2)
+            l2char = Right(str1, 2)
+            newstr = f2char & l2char & newstr
+        End If
+        OUTPUT "The new string is :" & newstr
